@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-
-interface Hero {
+import { motion } from "motion/react";
+export interface Hero {
   id: string;
   superhero: string;
   publisher: string;
@@ -21,7 +21,12 @@ export const CardHero = ({ heroe }: Props) => {
 
   return (
     <Link to={`/hero/${id}`} className="card__heroe">
-      <img src={heroeImage} alt={superhero} />
+      <motion.img
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 1 }}
+        src={heroeImage}
+        alt={superhero}
+      />
       <span>{publisher}</span>
       <small>{first_appearance}</small>
       <div className="card__heroe--info">

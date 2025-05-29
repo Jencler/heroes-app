@@ -1,5 +1,10 @@
 import { HeroList } from "../components";
 
 export const MarvelPage = () => {
-  return <HeroList publisher="Marvel Comics" />;
+  return (
+    <>
+      <title>Marvel | Heroes App</title>
+      <HeroList publisher="Marvel Comics" />
+    </>
+  );
 };

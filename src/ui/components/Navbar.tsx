@@ -34,11 +34,16 @@ export const Navbar = () => {
       </nav>
 
       <div className="navbar__right">
-        <Search className="search__icon" onClick={handleSearch} size={18} color="#2e2e2e" />
+        <Search
+          className="search__icon"
+          onClick={handleSearch}
+          size={18}
+          color="#2e2e2e"
+        />
 
         <button onClick={handleLogout} className="btn__auth">
           <LogOut size={18} color="#2e2e2e" />
-          Cerrar sesión
+          <span className="text-logout">Cerrar sesión</span>
         </button>
       </div>
     </div>
