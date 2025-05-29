@@ -97,6 +97,25 @@ html {
   gap: 24px 32px;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
+
+.results__heroes {
+  width: 100%;
+  display: grid;
+  gap: 24px 32px;
+  padding: 32px 0;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  justify-items: center;
+
+  & .card__heroe {
+    max-width: 400px;
+  }
+}
+
+.notfound__hero {
+  text-align: center;
+  padding: 32px 0;
+}
+
 .card__heroe {
   width: 100%;
   border: 1px solid #cacaca;
@@ -132,14 +151,13 @@ html {
   }
   & img {
     width: 100%;
-   
   }
 }
 
 .card__heroe--info {
   padding: 16px 12px;
   display: flex;
-  background-color: #FFF;
+  background-color: #fff;
   flex-direction: column;
   gap: 6px;
   z-index: 1000;
@@ -205,6 +223,28 @@ html {
   & p {
     color: #747474;
   }
+}
+
+.input__search--container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.label__form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: #2e2e2e;
+  font-size: 16px;
+}
+
+.input__search {
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 15px;
+  border: 1px solid #cacaca;
+  outline: none;
+  color: #747474;
 }
 
 @media (width > 600px) {
