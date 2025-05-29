@@ -10,10 +10,20 @@ html {
   font-style: normal;
 }
 
+.routes__container {
+  width: 100%;
+  padding: 32px 16px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.routes__container--navbar {
+  background: #ffffff;
+  /* border-bottom: 1px solid #cacaca86; */
+}
+
 .navbar__container {
   width: 100%;
-  height: 54px;
-  background: #ffffff;
+  height: 56px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -32,6 +42,14 @@ html {
   gap: 12px;
   padding: 0 16px;
 }
+.navbar__right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.search__icon {
+  cursor: pointer;
+}
 .navlink {
   text-decoration: none;
   color: #747474;
@@ -42,7 +60,7 @@ html {
 .link__active {
   color: #2e2e2e;
 }
-.btn__login {
+.btn__auth {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -58,6 +76,79 @@ html {
   cursor: pointer;
   transition: background 0.1s ease-in-out;
 }
-.btn__login:hover {
+.btn__auth:hover {
   background: #f1f1f1;
+}
+
+.page__login {
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  display: grid;
+  place-content: center;
+}
+.hero__list {
+  width: 100%;
+  display: grid;
+  gap: 24px 32px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+.card__heroe {
+  width: 100%;
+  border: 1px solid #cacaca;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  height: fit-content;
+  text-decoration: none;
+
+  & span {
+    position: absolute;
+    top: 10px;
+    right: 8px;
+    background: #fff;
+    padding: 4px 6px;
+    border: 1px solid #cacaca;
+    border-radius: 16px;
+    font-size: 12px;
+    color: #2e2e2e;
+  }
+  & small {
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    background: #fff;
+    padding: 4px 6px;
+    border: 1px solid #cacaca;
+    border-radius: 16px;
+    font-size: 12px;
+    color: #2e2e2e;
+  }
+  & img {
+    width: 100%;
+  }
+}
+
+.card__heroe--info {
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  & h2 {
+    font-size: 18px;
+    color: #2e2e2e;
+  }
+
+  & p {
+    font-size: 14px;
+    color: #747474;
+  }
+}
+
+.navlink__hero {
+  text-decoration: none;
+  color: #2e2e2e;
+  text-decoration: underline;
+  font-size: 15px;
 }
