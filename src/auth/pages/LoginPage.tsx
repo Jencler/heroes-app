@@ -1,11 +1,18 @@
 import { LogIn } from "lucide-react";
+import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../context/AuthContext";
 
 export const LoginPage = () => {
+  const { login } = useContext(AuthContext);
   const navigate = useNavigate();
 
+  const lasPath = localStorage.getItem("lastPath") || "/";
+
   const handleLogin = () => {
-    navigate("/", {
+    login("jencler");
+
+    navigate(lasPath, {
       replace: true,
     });
   };
